@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.Wpf.Controls.Demo", "doix.Wpf.Controls.Demo\doix.Wpf.Controls.Demo.csproj", "{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.Wpf.Controls", "doix.Wpf.Controls\doix.Wpf.Controls.csproj", "{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27475E4A-CFA1-4F66-8449-378FAE34204F}
+	EndGlobalSection
+EndGlobal
