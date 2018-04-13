@@ -25,13 +25,6 @@ namespace doix.Wpf.Controls
         public float TexCoordX;
         public float TexCoordY;
 
-        //[FieldOffset(20)]public byte ColorR;
-        //[FieldOffset(21)]public byte ColorG;
-        //[FieldOffset(22)]public byte ColorB;
-        //[FieldOffset(23)]public byte ColorA;
-
-
-
         public GLColor Color
         {
             get => new GLColor(ColorR / 255.0f, ColorG / 255.0f, ColorB / 255.0f, ColorA / 255.0f);

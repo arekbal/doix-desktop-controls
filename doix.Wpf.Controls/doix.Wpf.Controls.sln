@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.Wpf.Controls.Demo", "doix.Wpf.Controls.Demo\doix.Wpf.Controls.Demo.csproj", "{402E70B3-0181-4B40-B0B0-97BDF3A5A2A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.Wpf.Controls", "doix.Wpf.Controls\doix.Wpf.Controls.csproj", "{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.forms.controls.demo", "doix.forms.controls.demo\doix.forms.controls.demo.csproj", "{9CCAB5CA-7EF6-42AA-ADF2-8966EDFDE486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.forms.controls", "doix.forms.controls\doix.forms.controls.csproj", "{AC05E9D8-DF52-4B5E-83F1-5840713C079E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.core.controls", "doix.core.controls\doix.core.controls.csproj", "{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.desktop.controls.tests", "doix.desktop.controls.tests\doix.desktop.controls.tests.csproj", "{7A3C15A4-8F6B-499C-BDAB-C792EDF074EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DECE69C-6389-4EFD-9A3A-C5167FA2BB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCAB5CA-7EF6-42AA-ADF2-8966EDFDE486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCAB5CA-7EF6-42AA-ADF2-8966EDFDE486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCAB5CA-7EF6-42AA-ADF2-8966EDFDE486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCAB5CA-7EF6-42AA-ADF2-8966EDFDE486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC05E9D8-DF52-4B5E-83F1-5840713C079E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC05E9D8-DF52-4B5E-83F1-5840713C079E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC05E9D8-DF52-4B5E-83F1-5840713C079E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC05E9D8-DF52-4B5E-83F1-5840713C079E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3C15A4-8F6B-499C-BDAB-C792EDF074EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3C15A4-8F6B-499C-BDAB-C792EDF074EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3C15A4-8F6B-499C-BDAB-C792EDF074EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3C15A4-8F6B-499C-BDAB-C792EDF074EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:doix.Wpf.Controls.Demo"
         xmlns:doixControls="clr-namespace:doix.Wpf.Controls;assembly=doix.Wpf.Controls"
         mc:Ignorable="d"
+        xmlns:wf="clr-namespace:doix.forms.controls;assembly=doix.forms.controls"  
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <!--<WindowsFormsHost>
+            <wf:DataGridViewport x:Name="dg" />
+        </WindowsFormsHost>-->
+
+
         <doixControls:DataGrid FntPath="Content/Arial.fnt" x:Name="dg" />
     </Grid>
 </Window>

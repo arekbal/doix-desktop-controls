@@ -117,7 +117,12 @@
   <ItemGroup>
     <None Include="Resources\white1x1.bmp" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\doix.core.controls\doix.core.controls.csproj">
+      <Project>{b48575bb-fe9f-4c1e-9acd-91e1b5661c0d}</Project>
+      <Name>doix.core.controls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

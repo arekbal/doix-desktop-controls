@@ -1,21 +1,14 @@
 ﻿using GlmNet;
 using SharpGL;
-using SharpGL.SceneGraph;
 using SharpGL.SceneGraph.Assets;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using static SharpGL.OpenGL;
 
 namespace doix.Wpf.Controls
 {
-    class SpriteBatch : IDisposable
+  class SpriteBatch : IDisposable
     {
         public static class VertexAttributes
         {
@@ -24,8 +17,6 @@ namespace doix.Wpf.Controls
             public static readonly uint Color = _index++;
             public static readonly uint TexCoord = _index++;
         }
-
-        
 
         SharpGL.Shaders.ShaderProgram _shaderProgram = new SharpGL.Shaders.ShaderProgram();
 
