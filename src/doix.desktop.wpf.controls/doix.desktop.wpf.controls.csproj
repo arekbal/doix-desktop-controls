@@ -120,7 +120,7 @@
   <ItemGroup>
     <ProjectReference Include="..\doix.desktop.core.controls\doix.desktop.core.controls.csproj">
       <Project>{b48575bb-fe9f-4c1e-9acd-91e1b5661c0d}</Project>
-      <Name>doix.core.controls</Name>
+      <Name>doix.desktop.core.controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

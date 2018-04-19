@@ -78,14 +78,14 @@ namespace doix.desktop.forms.controls
 
     public DataGridViewport()
     {
-      InitializeComponent();     
+      InitializeComponent();
 
       if (!IsDesignTime)
       {
         OpenGLInitialized += this.OnGLInitialized;
-        OpenGLDraw += this.OnGLDraw;       
+        OpenGLDraw += this.OnGLDraw;
       }
-    }    
+    }
 
     public event Action Initializing;
     public event Action Initialized;
@@ -113,14 +113,14 @@ namespace doix.desktop.forms.controls
 
       spriteBatch = new SpriteBatch(OpenGL, 100000);
 
-      Initialized?.Invoke();      
+      Initialized?.Invoke();
     }
 
     private void OnGLInitialized(object sender, EventArgs e)
     {
-      OpenGL.ClearColor(0, 0.6f, 1, 1);  
+      OpenGL.ClearColor(0, 0.6f, 1, 1);
     }
-  
+
     private void OnGLDraw(object sender, RenderEventArgs args)
     {
       if (!isInitialized)
@@ -137,7 +137,7 @@ namespace doix.desktop.forms.controls
 
       if (_redrawRequired)
       {
-        OnRedraw(OpenGL);      
+        OnRedraw(OpenGL);
       }
 
       OnUpdate();
@@ -207,24 +207,54 @@ namespace doix.desktop.forms.controls
 
         var n = .39f;
 
-        spriteBatch.Quad(
-           new vec2(-n, -n),
-           new vec2(n, -n),
-           new vec2(n, n),
-           new vec2(-n, n),
-           // _texture,
-           Color.Red);
+
+        var rects = new[] { new vec2(32, 146), new vec2(71, 24), new vec2(55, 132), new vec2(77, 38), new vec2(43, 79) };
+
+        // reverse, longer into y
+        for (var i = 0; i < rects.Length; ++i)
+        {
+          ref var rect = ref rects[i];
+
+          if(rect.x > rect.y)
+          {
+            var oldX = rect.x;
+            rect.x = rect.y;
+            rect.y = rect.x;
+          }
+        }
+
+        Array.Sort(rects, new Comparison<vec2>((a, b) => (int)(b.y - a.y)));
+
+        var x = 0f;
+
+        for(var i = 0; i < rects.Length; ++i)
+        {
+          var rect = rects[i];
+
+          spriteBatch.Rect(
+             x, 0f, rect.x, rect.y, colors[i % colors.Length]);
+
+          x += rect.x;
+        }
+
+        //spriteBatch.Quad(
+        //   new vec2(-n, -n),
+        //   new vec2(n, -n),
+        //   new vec2(n, n),
+        //   new vec2(-n, n),
+        //   // _texture,
+        //   Color.Red);
 
         //spriteBatch.Rect(
         // 100, 105,
-        // 1000.0f, 1200.0f,                 
-        // Color.Black);
+        // 1000.0f, 1200.0f,
+        //Color.Black);
 
         //spriteBatch.Rect(
         //  100, 105,
         //  1300.0f, 1200.0f,
         //  _texture,
-        //  Color.Gainsboro);              
+        //  Color.Gainsboro);
 
         //for (var x = 0f; x < 1000f; x += 10)
         //    for (var y = 0f; y < 1000f; y += 10)
@@ -235,7 +265,7 @@ namespace doix.desktop.forms.controls
         //         Color.PaleVioletRed);
         //    }
 
-        spriteBatch.Text((float)HOffset, (float)VOffset, "Hello World!!!", font, TextColor, 1f, 1f);
+        //spriteBatch.Text((float)HOffset, (float)VOffset, "Hello World!!!", font, TextColor, 1f, 1f);
       }
     }
 

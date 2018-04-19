@@ -57,11 +57,11 @@
   <ItemGroup>
     <ProjectReference Include="..\doix.desktop.core.controls\doix.desktop.core.controls.csproj">
       <Project>{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}</Project>
-      <Name>doix.core.controls</Name>
+      <Name>doix.desktop.core.controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\doix.desktop.forms.controls\doix.desktop.forms.controls.csproj">
       <Project>{ac05e9d8-df52-4b5e-83f1-5840713c079e}</Project>
-      <Name>doix.forms.controls</Name>
+      <Name>doix.desktop.forms.controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

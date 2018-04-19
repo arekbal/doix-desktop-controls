@@ -17,7 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.desktop.controls.tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.watch", "doix.watch\doix.watch.csproj", "{6DDF34CB-605C-4E7E-9B21-277ADECE7900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doix.utils", "doix.utils\doix.utils.csproj", "{9270F234-9265-4B4D-ABE6-DAAE9C299CC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "doix.utils", "doix.utils\doix.utils.csproj", "{9270F234-9265-4B4D-ABE6-DAAE9C299CC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{061A69B5-B37B-4B83-814E-78C5E48D413F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
