@@ -32,6 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GlmNet, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GlmNet.0.5.1.0\lib\net40\GlmNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpGL.2.4.0.0\lib\net40\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.SceneGraph, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpGL.2.4.0.0\lib\net40\SharpGL.SceneGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.WinForms, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpGL.WinForms.2.4.0.0\lib\net40\SharpGL.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,11 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ActivatorServiceProvider.cs" />
+    <Compile Include="Scenarios\Base\GLScenarioBase.cs" />
+    <Compile Include="Scenarios\Base\ScenarioBase.cs" />
+    <Compile Include="Scenarios\Base\ScenarioResolver.cs" />
+    <Compile Include="Scenarios\SoopaScenario.cs" />
+    <Compile Include="Scenarios\SomeSquaresScenario.cs" />
+    <Compile Include="Scenarios\Base\SpriteBatchScenarioBase.cs" />
+    <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +81,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,9 +99,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\doix.desktop.core.controls\doix.desktop.core.controls.csproj">
+      <Project>{B48575BB-FE9F-4C1E-9ACD-91E1B5661C0D}</Project>
+      <Name>doix.desktop.core.controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\doix.desktop.forms.controls\doix.desktop.forms.controls.csproj">
       <Project>{ac05e9d8-df52-4b5e-83f1-5840713c079e}</Project>
       <Name>doix.desktop.forms.controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\doix.utils\doix.utils.csproj">
+      <Project>{9270f234-9265-4b4d-abe6-daae9c299cc1}</Project>
+      <Name>doix.utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,7 +22,7 @@ namespace doix.desktop.forms.controls.demo
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new DataGridDemoForm());
+      Application.Run(new TestForm());
     }
   }
 }

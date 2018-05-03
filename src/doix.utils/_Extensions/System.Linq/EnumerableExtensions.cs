@@ -20,5 +20,8 @@ namespace System.Linq
       foreach (T i in source)
         yield return i;
     }
+
+    public static bool Contains<T>(this IEnumerable<Type> that)
+      => that.Any(t => t == typeof(T));
   }
 }

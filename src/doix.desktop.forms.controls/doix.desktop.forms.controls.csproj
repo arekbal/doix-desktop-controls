@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AC05E9D8-DF52-4B5E-83F1-5840713C079E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>doix.forms.controls</RootNamespace>
-    <AssemblyName>doix.forms.controls</AssemblyName>
+    <RootNamespace>doix.desktop.forms.controls</RootNamespace>
+    <AssemblyName>doix.desktop.forms.controls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColumnInfo.cs" />
+    <Compile Include="RectComparer.cs" />
     <Compile Include="UserControlEx.cs">
       <SubType>UserControl</SubType>
     </Compile>

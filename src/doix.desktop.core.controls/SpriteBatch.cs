@@ -92,6 +92,9 @@ namespace doix.desktop.core.controls
 
     public void Begin()
     {
+      if (IsDisposed)
+        throw new ObjectDisposedException(nameof(SpriteBatch));
+
       gl.Disable(GL_CULL_FACE);
 
       gl.Enable(GL_DEPTH_TEST);
@@ -334,14 +337,34 @@ namespace doix.desktop.core.controls
       }
     }
 
+    public bool IsDisposed { get; private set; }
 
-    public void Dispose()
+    protected virtual void Dispose(bool disposing)
     {
-      gl.DeleteBuffers(1, vertexBufferIds);
-      gl.DeleteBuffers(1, indexBufferIds);
-      gl.DeleteVertexArrays(1, vaos);
+      if (IsDisposed)
+        return;
 
-      white1x1Tex.Destroy(gl);
+      if (disposing)
+      {
+        gl.DeleteBuffers(1, vertexBufferIds);
+        gl.DeleteBuffers(1, indexBufferIds);
+        gl.DeleteVertexArrays(1, vaos);
+
+        white1x1Tex.Destroy(gl);
+      }
+
+      IsDisposed = true;
+    }
+
+    ~SpriteBatch()
+    {      
+      Dispose(false);
+    }
+       
+    public void Dispose()
+    {    
+      Dispose(true);
+      GC.SuppressFinalize(this);
     }
   }
 }
