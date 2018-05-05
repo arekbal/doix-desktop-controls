@@ -1,6 +1,7 @@
 ﻿using GlmNet;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,23 +12,29 @@ namespace doix.desktop.core.controls
 {
   public static class HitTests
   {
-    public static HitTestResult HitTest(vec4 currRect, vec4 otherRect)
+    [DebuggerHidden]
+    public static HitTestResult HitTest(ref vec4 currRect, ref vec4 otherRect)
     {
       var hitTestX = HitTest(currRect.x, currRect.x + currRect.z, otherRect.x, otherRect.x + otherRect.z);
+
+      if (hitTestX == HitTestResult.Apart)
+        return HitTestResult.Apart;
+
       var hitTestY = HitTest(currRect.y, currRect.y + currRect.w, otherRect.y, otherRect.y + otherRect.w);
+
+      if (hitTestY == HitTestResult.Apart)
+        return HitTestResult.Apart;
 
       if (hitTestX == A_Contains_B && hitTestY == A_Contains_B)
         return A_Contains_B;
 
       if (hitTestX == B_Contains_A && hitTestY == B_Contains_A)
         return B_Contains_A;
-
-      if (hitTestX != Apart && hitTestY != Apart)
-        return Intersection;
-
-      return Apart;
+      
+      return Intersection;
     }
 
+    [DebuggerHidden]
     public static HitTestResult HitTest(float a0, float a1, float b0, float b1)
     {
       if (a0 >= a1)

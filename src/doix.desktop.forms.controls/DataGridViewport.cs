@@ -387,7 +387,7 @@ namespace doix.desktop.forms.controls
           var currRect = rects[iCurrentRect];
           var otherRect = rects[iOtherRect];
 
-          if (HitTests.HitTest(currRect, otherRect) != HitTestResult.Apart)
+          if (HitTests.HitTest(ref currRect, ref otherRect) != HitTestResult.Apart)
             throw new Exception("collision");
         }
       }

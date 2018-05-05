@@ -64,6 +64,7 @@
     <Compile Include="FntFonts\FntPages.cs" />
     <Compile Include="HitTestResult.cs" />
     <Compile Include="HitTests.cs" />
+    <Compile Include="Packing\MaxRectsBinPack.cs" />
     <Compile Include="Native\WinAPI.cs" />
     <Compile Include="Helpers\OpenGLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
