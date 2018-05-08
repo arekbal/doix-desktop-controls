@@ -48,6 +48,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TrueTypeSharp, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TrueTypeSharp.1.0.5\lib\net20\TrueTypeSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
@@ -62,6 +65,8 @@
     <Compile Include="FntFonts\FntKernings.cs" />
     <Compile Include="FntFonts\FntPage.cs" />
     <Compile Include="FntFonts\FntPages.cs" />
+    <Compile Include="FontRenderer.cs" />
+    <Compile Include="FrameBuffer.cs" />
     <Compile Include="HitTestResult.cs" />
     <Compile Include="HitTests.cs" />
     <Compile Include="Packing\MaxRectsBinPack.cs" />

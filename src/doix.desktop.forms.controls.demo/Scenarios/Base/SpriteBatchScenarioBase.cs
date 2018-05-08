@@ -14,6 +14,12 @@ namespace doix.forms.controls.demo.Scenarios.Base
   {
     public SpriteBatch SpriteBatch { get; private set; }
 
+    protected static readonly Color[] TestColors = new Color[] { Color.Bisque, Color.Azure, Color.AliceBlue, Color.Aqua, Color.Brown, Color.Chocolate, Color.Yellow, Color.CornflowerBlue };
+
+    protected static readonly Random Random = new Random();
+
+    protected static Color TestColor => TestColors[Random.Next() % TestColors.Length];
+
     protected override void OnInitialize()
       => SpriteBatch = new SpriteBatch(GL, 100000);
 

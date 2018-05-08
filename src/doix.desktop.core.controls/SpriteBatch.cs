@@ -145,6 +145,15 @@ namespace doix.desktop.core.controls
         return;
 
       Flush();
+
+      gl.BindVertexArray(0);
+
+      gl.BindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+      gl.BindBuffer(GL_ARRAY_BUFFER, 0);
+
+      _shaderProgram.Unbind(gl);
+
+      gl.BindTexture(GL_TEXTURE_2D, 0);
     }
 
     protected void Vertex(VertexPosTexColor vertex)
@@ -230,6 +239,31 @@ namespace doix.desktop.core.controls
 
     public void Rect(float x, float y, float width, float height, Texture tex, Color tint, float z = 0)
         => Quad(new vec2(x, y), new vec2(x + width, y), new vec2(x + width, y + height), new vec2(x, y + height), tex, tint, z);
+
+    public void Fan(vec2[] points, Color c, float z = 0)
+    {
+      if (points.Length < 3)
+        throw new ArgumentException("have to contain at least 3 points", nameof(points));
+
+      //TODO: move into vertices and indices, instead of using triangles directly (it would save us some verts [like 60% of them])
+      for (var i = 0; i < points.Length - 2; i++)
+      {        
+        Triangle(points[0], points[i + 1], points[i + 2], c, z);
+      }
+    }
+
+    public void Fill(vec2[] points, bool assumeConvex, Color c, float z = 0)
+    {
+      if (assumeConvex)
+      {
+        Fan(points, c, z);
+      }
+
+      if (points.Length < 3)
+        throw new ArgumentException("have to contain at least 3 points", nameof(points));
+
+      throw new NotImplementedException();
+    }
 
     public void Text(float x, float y, string text, FntFontData font, Color tint, float scaleX = 1, float scaleY = 1, float z = 0)
     {

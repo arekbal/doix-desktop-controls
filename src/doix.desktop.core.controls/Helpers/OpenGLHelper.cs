@@ -12,9 +12,10 @@ namespace doix.desktop.core.controls.Helpers
   public static class OpenGLHelper
   {
     /// <summary> Changes color and clears </summary>
-    public static void Clear(this OpenGL that, float r, float g, float b, float a)
+    public static void Clear(this OpenGL that, float r, float g, float b, float a, float depth=1f)
     {
       that.ClearColor(r, g, b, a);
+      that.ClearDepth(depth);
       that.Clear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     }
 

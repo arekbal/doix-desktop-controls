@@ -9,33 +9,12 @@ using doix.desktop.core.controls;
 using doix.desktop.core.controls.Helpers;
 using doix.desktop.core.controls.Packing;
 using GlmNet;
-using Mapper;
 using SharpGL;
 
 namespace doix.forms.controls.demo.Scenarios
 {
   class SomeSquaresScenario : Base.SpriteBatchScenarioBase
   {
-    class Sprite : ISprite
-    {
-      public int Width { get; set; }
-      public int Height { get; set; }
-      public int Area { get; set; }
-
-      public List<IMappedImageInfo> MappedImages { get; } = new List<IMappedImageInfo>();
-
-      public void AddMappedImage(IMappedImageInfo mappedImage)
-      {
-        MappedImages.Add(mappedImage);
-      }
-    }
-
-    class ImageInfo : IImageInfo
-    {
-      public int Width { get; set; }
-      public int Height { get; set; }
-    }
-
     vec2[] rectSizes = null;
 
     Rect[] rects;

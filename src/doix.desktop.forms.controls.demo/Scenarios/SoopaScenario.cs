@@ -20,10 +20,6 @@ namespace doix.forms.controls.demo.Scenarios
   {
     vec2[] rectSizes = null;
 
-    Random rand = new Random();
-
-    static readonly Color[] colors = new Color[] { Color.Bisque, Color.Azure, Color.AliceBlue, Color.Aqua, Color.Brown, Color.Chocolate };
-
     List<vec4> rects;
     List<vec4> spaces;
 
@@ -34,7 +30,7 @@ namespace doix.forms.controls.demo.Scenarios
       var scale = 100d;
       var rectCount = 500;
 
-      rectSizes = Enumerable.Range(0, rectCount).Select(p => new vec2((float)(rand.NextDouble() * scale), (float)(rand.NextDouble() * scale))).ToArray();
+      rectSizes = Enumerable.Range(0, rectCount).Select(p => new vec2((float)(Random.NextDouble() * scale), (float)(Random.NextDouble() * scale))).ToArray();
 
 
       Array.Sort(rectSizes, new Comparison<vec2>((a, b) => (int)(b.x * b.y - a.x * a.y)));
@@ -213,7 +209,7 @@ namespace doix.forms.controls.demo.Scenarios
         for (var i = 0; i < rects.Count; ++i)
         {
           var rect = rects[i];
-          SpriteBatch.Rect(rect.x, rect.y, rect.z, rect.w, colors[i % colors.Length]);
+          SpriteBatch.Rect(rect.x, rect.y, rect.z, rect.w, TestColor);
         }
       }
 

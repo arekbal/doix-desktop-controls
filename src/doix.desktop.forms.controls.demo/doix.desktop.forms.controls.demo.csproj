@@ -61,8 +61,9 @@
     <Compile Include="Scenarios\Base\GLScenarioBase.cs" />
     <Compile Include="Scenarios\Base\ScenarioBase.cs" />
     <Compile Include="Scenarios\Base\ScenarioResolver.cs" />
-    <Compile Include="Scenarios\SoopaScenario.cs" />
+    <Compile Include="Scenarios\FontToTextureScenario.cs" />
     <Compile Include="Scenarios\SomeSquaresScenario.cs" />
+    <Compile Include="Scenarios\SoopaScenario.cs" />
     <Compile Include="Scenarios\Base\SpriteBatchScenarioBase.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
